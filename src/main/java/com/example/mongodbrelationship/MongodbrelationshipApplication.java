@@ -30,7 +30,7 @@ public class MongodbrelationshipApplication implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         personRepository.deleteAll();
 
-        final Address address = new Address("19 Imaginary Road", "Imaginary Place", "Imaginary City", "UK");
+        final Address address = new Address("19 Imaginary Road", "Imaginary Place123", "Imaginary City123", "UK");
 
         final Hobby badminton = new Hobby("Badminton");
         final Hobby tv = new Hobby("TV");
