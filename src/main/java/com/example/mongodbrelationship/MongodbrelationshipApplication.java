@@ -36,17 +36,17 @@ public class MongodbrelationshipApplication implements CommandLineRunner {
         final Hobby tv = new Hobby("TV");
         final List<Hobby> hobbies = Arrays.asList(badminton, tv);
 
-        final Person john = new Person("John", "Doe", LocalDateTime.now(), address, "Winner", 100, hobbies);
-        personRepository.save(john);
+        final Person andy = new Person("Andy", "Parker", LocalDateTime.now(), address, "Winner", 100, hobbies);
+        personRepository.save(andy);
 
         System.out.println("Find by first name");
-        personRepository.findByFirstName("John").forEach(System.out::println);
+        personRepository.findByFirstName("Andy").forEach(System.out::println);
 
         System.out.println("Find by country (UK)");
         personRepository.findByCountry("UK").forEach(System.out::println);
 
         address.setCountry("US");
-        personRepository.save(john);
+        personRepository.save(andy);
         System.out.println("Find by country (US)");
         personRepository.findByCountry("US").forEach(System.out::println);
     }
